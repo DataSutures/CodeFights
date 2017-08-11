@@ -34,7 +34,10 @@ centuryFromYear(year) = 17
 ### My Solution
 #### Java
 ```Javascript
-int add(int param1, int param2) {
-	return param1 + param2;
+int centuryFromYear(int year) {
+    int century = year / 100;
+    if ((year % 100) > 0)
+        century++;
+    return century;
 }
 ```
