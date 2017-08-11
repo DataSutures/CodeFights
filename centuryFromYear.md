@@ -4,12 +4,12 @@ Given a year, return the century it is in. The first century spans from the year
 
 ## Example
 
-1
+1.
 ```Javascript
 year = 1905
 centuryFromYear(year) = 20
 ```
-2 
+2. 
 ```Javascript
 year = 1700
 centuryFromYear(year) = 17
