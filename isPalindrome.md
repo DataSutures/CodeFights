@@ -30,16 +30,14 @@ checkPalindrome(inputString) = true;
 
 - **[output] boolean** <br>
 
-	```Javascript
-	if(isPalindrome(inputString)){
-		return true;
-		}
-	else{
-		return false;
-		}
-	```
+    true if inputString is a palindrome, false otherwise.
 
 ## Solutions
 ### My Solution
 #### Java
-    true if inputString is a palindrome, false otherwise.
+```Javascript
+boolean checkPalindrome(String inputString) {
+	StringBuilder sBuilder = new StringBuilder(inputString);
+	return inputString.equals(sBuilder.reverse().toString());
+}
+```
