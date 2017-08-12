@@ -91,7 +91,7 @@ adjacentElementsProduct(inputArray) = 21
 
 An array of integers containing at least two elements.
 
-    *Guaranteed constraints:*
+*Guaranteed constraints:*
 ```Javascript
 2 ≤ inputArray.length ≤ 10
 -1000 ≤ inputArray[i] ≤ 1000
@@ -137,7 +137,7 @@ centuryFromYear(year) = 17
 
 A positive integer, designating the year.
 
-    *Guaranteed constraints:*
+*Guaranteed constraints:*
 ```Javascript
 1 ≤ year ≤ 2005.
 ```
@@ -172,7 +172,7 @@ checkPalindrome(inputString) = true;
 
 A non-empty string consisting of lowercase characters.
 
-    *Guaranteed constraints:*
+*Guaranteed constraints:*
 ```Javascript
 1 ≤ inputString.length ≤ 105
 ```
@@ -197,7 +197,8 @@ Ratiorg got statues of *different* sizes as a present from CodeMaster for his bi
 
 ```Javascript
 statues = [6, 2, 3, 8]
-makeArrayConsecutive2(statues) = 3```
+makeArrayConsecutive2(statues) = 3
+```
 
 #### Input/Output
 
@@ -206,7 +207,8 @@ makeArrayConsecutive2(statues) = 3```
 
 An array of distinct non-negative integers.
 
-    *Guaranteed constraints:* 
+*Guaranteed constraints:* 
+
 ```Javascript
 1 ≤ statues.length ≤ 10
 0 ≤ statues[i] ≤ 20
