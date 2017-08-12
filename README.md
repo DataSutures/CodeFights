@@ -103,6 +103,42 @@ The largest product of adjacent elements.
 
 ## allLongestStrings
 ## almostIncreasingSequence
+#### Description
+
+Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array.
+
+#### Example
+
+```Javascript
+// Example 1
+sequence = [1, 3, 2, 1]
+almostIncreasingSequence(sequence) = false
+// There is no one element in this array that can be removed in order to get a strictly increasing
+// sequence.
+
+// Example 2
+sequence = [1, 3, 2]
+almostIncreasingSequence(sequence) = true
+// You can remove 3 from the array to get the strictly increasing sequence [1, 2]. Alternately, you
+// can remove 2 to get the strictly increasing sequence [1, 3].
+```
+
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)** <br>
+- **[input] array.integer sequence** <br>
+
+*Guaranteed constraints:*
+```Javascript
+2 ≤ sequence.length ≤ 105
+-105 ≤ sequence[i] ≤ 105
+```
+
+- **[output] boolean** <br>
+
+Return *true* if it is possible to remove one element from the array in order to get a strictly increasing sequence, otherwise return *false*.
+
 ## alphabeticShift
 ## alternatingSums
 ## areEquallyStrong
@@ -179,7 +215,7 @@ A non-empty string consisting of lowercase characters.
 
 - **[output] boolean** <br>
 
-true if inputString is a palindrome, false otherwise.
+*true* if inputString is a palindrome, *false* otherwise.
 
 ## chessBoardCellColor
 ## circleOfNumbers
