@@ -117,6 +117,7 @@ allLongestStrings(inputArray) = ["aba", "vcd", "aba"]
 - **[time limit] 3000ms (java)** <br>
 - **[input] array.string inputArray** <br>
     A non-empty array. <br>
+
 *Guaranteed constraints:*
 ```Javascript
 1 ≤ inputArray.length ≤ 10
@@ -244,10 +245,69 @@ A non-empty string consisting of lowercase characters.
 ## chessBoardCellColor
 ## circleOfNumbers
 ## commonCharacterCount
+#### Description
+
+Given two strings, find the number of common characters between them.
+
+#### Example
+```Javascript
+s1 = "aabcc"
+s2 = "adcaa"
+commonCharacterCount(s1, s2) = 3
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)** <br>
+- **[input] string s1** <br>
+    A string consisting of lowercase latin letters a-z. <br>
+
+*Guaranteed constraints:*
+```Javascript
+1 ≤ s1.length ≤ 15
+```
+- **[input] string s1** <br>
+A string consisting of lowercase latin letters a-z. <br>
+
+*Guaranteed constraints:*
+```Javascript
+1 ≤ s1.length ≤ 15
+```
+
+- **[output] integer** <br>
+
 ## depositProfit
 ## evenDigitsOnly
 ## isIPv4Address
 ## isLucky
+#### Description
+
+Ticket numbers usually consist of an even number of digits. A ticket number is considered *lucky* if the sum of the first half of the digits is equal to the sum of the second half.
+
+Given a ticket number *n*, determine if it's *lucky* or not.
+
+#### Example
+```Javascript
+// Example 1
+n = 1230
+isLucky(n) = true
+// Example 2
+n = 239017
+isLucky(n) = false
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)** <br>
+- **[input] integer n** <br>
+    A ticket number represented as a positive integer with an even number of digits. <br>
+
+*Guaranteed constraints:*
+```Javascript
+10 ≤ n < 10^6
+```
+
+- **[output] boolean** <br>
+*true* if *n* is a lucky ticket number, *false* otherwise.
+
 ## makeArrayConsecutive2
 #### Description
 
