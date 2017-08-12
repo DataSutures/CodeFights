@@ -156,8 +156,8 @@ almostIncreasingSequence(sequence) = true
 
 *Guaranteed constraints:*
 ```Javascript
-2 ≤ sequence.length ≤ 105
--105 ≤ sequence[i] ≤ 105
+2 ≤ sequence.length ≤ 10^5
+-105 ≤ sequence[i] ≤ 10^5
 ```
 
 - **[output] boolean** <br>
@@ -235,7 +235,7 @@ A non-empty string consisting of lowercase characters.
 
 *Guaranteed constraints:*
 ```Javascript
-1 ≤ inputString.length ≤ 105
+1 ≤ inputString.length ≤ 10^5
 ```
 
 - **[output] boolean** <br>
@@ -399,11 +399,11 @@ shapeArea(n) = 13
 
     *Guaranteed constraints:*
 ```Javascript
-1 ≤ n < 104
+1 ≤ n < 10^4
 ```
 
 - **[output] integer** <br>
-The area of the n-interesting polygon.
+The area of the *n*-interesting polygon.
 
 
 ## sortByHeight
