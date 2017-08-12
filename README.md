@@ -999,6 +999,58 @@ Thus, it will take *3* years for your balance to pass the *threshold*, which is 
    The number of years it would take to hit the *threshold*.  
 
 
-## stringsRearrangement
-## variableName
 ## absoluteValuesSumMinimization
+#### Description
+Given a sorted array of integers *a*, find an integer *x* from *a* such that the value of
+```Javascript
+abs(a[0] - x) + abs(a[1] - x) + ... + abs(a[a.length - 1] - x)
+```
+is the *smallest* possible (here *abs* denotes the absolute value).
+If there are several possible answers, output the *smallest* one.
+#### Example
+```Javascript
+a = [2, 4, 7]
+absoluteValuesSumMinimization(a) = 4
+```
+Image:
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer a**  
+  A non-empty array of integers, sorted in ascending order.
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ a.length ≤ 200,
+-10^6 ≤ a[i] ≤ 10^6
+```
+- **[output]  integer**  
+
+## stringsRearrangement
+#### Description
+Given an array of equal-length strings, check if it is possible to rearrange the strings in such a way that after the rearrangement the strings at consecutive positions would differ by exactly one character.
+#### Example
+```Javascript
+// Example 1
+inputArray = ["aba", "bbb", "bab"]
+stringsRearrangement(inputArray) = false
+// All rearrangements don't satisfy the description condition.
+
+// Example 2
+inputArray = ["ab", "bb", "aa"]
+stringsRearrangement(inputArray) = true
+// Strings can be rearranged in the following way: "aa", "ab", "bb".
+```
+Image:
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.string inputArray**  
+  A non-empty array of strings of lowercase letters.
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ inputArray.length ≤ 10,
+1 ≤ inputArray[i].length ≤ 15
+```
+- **[output]  boolean**  
