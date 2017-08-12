@@ -382,26 +382,623 @@ isLucky(n) = false
 
 - **[output] boolean**  
   *true* if *n* is a lucky ticket number, *false* otherwise.  
-  
-## alphabeticShift
-## alternatingSums
-## areEquallyStrong
-## areSimilar
-## arrayChange
-## arrayMaximalAdjacentDifference
-## arrayReplace
-## avoidObstacles
-## boxBlur
-## chessBoardCellColor
-## addBorder
-## circleOfNumbers
-## depositProfit
-## evenDigitsOnly
-## isIPv4Address
-## minesweeper
-## palindromeRearranging
-## reverseParentheses
+
 ## sortByHeight
+#### Description
+Some people are standing in a row in a park. There are trees between them which cannot be moved. Your task is to rearrange the people by their heights in a non-descending order without moving the trees.
+#### Example
+```Javascript
+a = [-1, 150, 190, 170, -1, -1, 160, 180]
+sortByHeight(a) = [-1, 150, 160, 170, -1, -1, 180, 190]
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer a**  
+    If a[i] = -1, then the *ith* position is occupied by a tree. Otherwise a[i] is the height of a person standing in the *ith* position.
+
+  *Guaranteed constraints:*
+```Javascript
+5 ≤ a.length ≤ 15
+-1 ≤ a[i] ≤ 200
+```
+
+- **[output]  array.integer**  
+  Sorted array *a* with all the trees untouched.
+
+## reverseParentheses
+#### Description
+You have a string *s* that consists of English letters, punctuation marks, whitespace characters, and brackets. It is guaranteed that the parentheses in *s* form a [regular bracket sequence](http://poj.org/problem?id=1141 "Parenthesis").
+
+Your task is to reverse the strings contained in each pair of matching parentheses, starting from the innermost pair. The results string should not contain any parentheses.
+#### Example
+```Javascript
+s = "a(bc)de"
+reverseParentheses(s) = "acbde"
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string s**  
+    A string consisting of English letters, punctuation marks, whitespace characters and brackets. It is guaranteed that parentheses form a *regular bracket sequence*.
+
+  *Guaranteed constraints:*
+```Javascript
+5 ≤ s.length ≤ 55
+```
+
+- **[output]  string**  
+
+## alternatingSums
+#### Description
+Several people are standing in a row and need to be divided into two teams. The first person goes into *team 1*, the second goes into *team 2*, the third goes into *team 1* again, the fourth into *team 2*, and so on.
+
+You are given an array of positive integers - the weights of the people. Return an array of two integers, where the first element is the total weight of *team 1*, and the second element is the total weight of *team 2* after the division is complete.
+#### Example
+```Javascript
+a = [50, 60, 60, 45, 70]
+alternatingSums(a) = [180, 105]
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer a**  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ a.length ≤ 10
+45 ≤ a[i] ≤ 100
+```
+
+- **[output]  array.integer**  
+
+## addBorder
+#### Description
+Given a rectangular matrix of characters, add a border of asterisks(*) to it.
+#### Example
+```Javascript
+picture = ["abc",
+           "ded"]
+
+addBorder(picture) = ["*****",
+                      "*abc*",
+                      "*ded*",
+                      "*****"]
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.string picture**  
+  A non-empty array of non-empty equal-length strings.
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ picture.length ≤ 5
+1 ≤ picture[i].length ≤ 5
+```
+
+- **[output]  array.string**  
+   The same matrix of characters, framed with a border of asterisks of width *1*.  
+
+## areSimilar
+#### Description
+Two arrays are called *similar* if one can be obtained from another by swapping at most one pair of elements in one of the arrays.  
+#### Example
+```Javascript
+// Example 1
+a = [1, 2, 3]
+b = [1, 2, 3]
+areSimilar(a, b) = true
+// The arrays are equal, no need to swap any elements.
+
+// Example 2
+a = [1, 2, 3]
+b = [2, 1, 3]
+areSimilar(a, b) = true
+// We can obtain b from a by swapping 2 and 1 in b.
+
+// Example 3
+a = [1, 2, 2]
+b = [2, 1, 1]
+areSimilar(a, b) = false
+//Any swap of any two elements either in a or in b won't make a and b equal.
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer a**  
+  Array of integers.
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ a.length ≤ 10^5
+1 ≤ a[i] ≤ 1000
+```
+- **[input] array.integer b**  
+  Array of integers of the same length as *a*.
+  *Guaranteed constraints:*
+```Javascript
+b.length = a.length
+1 ≤ b[i] ≤ 1000
+```
+
+- **[output]  boolean**  
+   *true* if *a* and *b* are similar, *false* otherwise.  
+
+## arrayChange
+#### Description
+You are given an array of integers. On each move you are allowed to increase exactly one of its element by one. Find the minimal number of moves required to obtain a strictly increasing sequence from the input.
+#### Example
+```Javascript
+inputArray = [1, 1, 1]
+arrayChange(inputArray) = 3
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer inputArray**  
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ inputArray.length ≤ 10^5
+-10^5 ≤ inputArray[i] ≤ 10^5
+```
+
+- **[output]  integer**  
+   The minimal number of moves needed to obtain a strictly increasing sequence from *inputArray*.
+It's guaranteed that for the given test cases the answer always fits signed *32*-bit integer type.  
+
+## palindromeRearranging
+#### Description
+Given a string, find out if its characters can be rearranged to form a [palindrome](https://en.wikipedia.org/wiki/Palindrome "Palindrome").
+#### Example
+```Javascript
+inputString = "aabb"
+palindromeRearranging(inputString) = true
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string inputString**  
+  A string consisting of lowercase English letters.  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ inputString.length ≤ 50
+```
+
+- **[output]  boolean**  
+  *true* if the characters of the *inputString* can be rearranged to form a palindrome, *false* otherwise.  
+
+## areEquallyStrong
+#### Description
+Call two arms *equally* strong if the heaviest weights they each are able to lift are equal.
+
+Call two people *equally* strong if their strongest arms are equally strong (the strongest arm can be both the right and the left), and so are their weakest arms.
+
+Given your and your friend's arms' lifting capabilities find out if you two are equally strong.
+
+
+#### Example
+```Javascript
+// Example 1
+yourLeft = 10
+yourRight = 15
+friendsLeft = 15
+friendsRight = 10
+areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) = true
+
+// Example 2
+yourLeft = 15
+yourRight = 10
+friendsLeft = 15
+friendsRight = 10
+areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) = true
+
+// Example
+yourLeft = 15
+yourRight = 10
+friendsLeft = 15
+friendsRight = 9
+areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) = false
+
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer yourLeft**  
+  A non-negative integer representing the heaviest weight you can lift with your left arm.
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ yourLeft ≤ 20
+```
+- **[input] integer yourRight**  
+  A non-negative integer representing the heaviest weight you can lift with your right arm.
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ yourRight ≤ 20
+```
+- **[input] integer friendsLeft**  
+  A non-negative integer representing the heaviest weight your friend can lift with his or her left arm.
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ friendsLeft ≤ 20
+```
+- **[input] integer friendsRight**  
+  A non-negative integer representing the heaviest weight your friend can lift with his or her right arm.
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ friendsRight ≤ 20
+```
+- **[output]  boolean**  
+  *true* if you and your friend are equally strong, *false* otherwise.  
+
+## arrayMaximalAdjacentDifference
+#### Description
+Given an array of integers, find the maximal absolute difference between any two of its adjacent elements.  
+#### Example
+```Javascript
+inputArray = [2, 4, 1, 0]
+arrayMaximalAdjacentDifference(inputArray) = 3
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer inputArray**  
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ inputArray.length ≤ 10,
+-15 ≤ inputArray[i] ≤ 15
+```
+
+- **[output]  integer**  
+  The maximal absolute difference.  
+
+## isIPv4Address
+#### Description
+An IP address is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication. There are two versions of the Internet protocol, and thus two versions of addresses. One of them is the *IPv4 address*.
+
+IPv4 addresses are represented in dot-decimal notation, which consists of four decimal numbers, each ranging from *0* to *255*, separated by dots, e.g., 172.16.254.1.
+
+Given a string, find out if it satisfies the IPv4 address naming rules.
+#### Example
+```Javascript
+// Example 1
+inputString = "172.16.254.1"
+isIPv4Address(inputString) = true
+
+// Example 2
+inputString = "172.316.254.1"
+isIPv4Address(inputString) = false
+// 316 is not in range [0, 255]
+
+// Example 3
+inputString = ".254.255.0"
+isIPv4Address(inputString) = false
+// There is no first number.
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string inputString**  
+  A string consisting of digits, full stops and lowercase Latin letters.  
+
+  *Guaranteed constraints:*
+```Javascript
+5 ≤ inputString.length ≤ 15
+```
+
+- **[output]  boolean**  
+  *true* if *inputString* satisfies the IPv4 address naming rules, *false* otherwise.  
+
+## avoidObstacles
+#### Description
+You are given an array of integers representing coordinates of obstacles situated on a straight line.
+
+Assume that you are jumping from the point with coordinate 0 to the right. You are allowed only to make jumps of the same length represented by some integer.
+
+Find the minimal length of the jump enough to avoid all the obstacles.
+#### Example
+```Javascript
+inputArray = [5, 3, 6, 7, 9]
+avoidObstacles(inputArray) = 4
+```
+Check out the image below for better understanding:
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer inputArray**  
+  Non-empty array of positive integers.
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ inputArray.length ≤ 10,
+1 ≤ inputArray[i] ≤ 40
+```
+
+- **[output]  integer**  
+  The desired length.  
+
+## boxBlur
+#### Description
+Last night you had to study, but decided to party instead. Now there is a black and white photo of you that is about to go viral. You cannot let this ruin your reputation, so you want to apply *box blur* algorithm to the photo to hide its content.
+
+The algorithm works as follows: each pixel *x* in the resulting image has a value equal to the average value of the input image pixels' values from the *3 × 3* square with the center at *x*. All pixels at the edges are cropped.
+
+As pixel's value is an integer, all fractions should be rounded down.  
+
+#### Example
+```Javascript
+image = [[1, 1, 1],
+         [1, 7, 1],
+         [1, 1, 1]]
+
+boxBlur(image) = [[1]]
+```
+In the given example all boundary pixels were cropped, and the value of the pixel in the middle was obtained as (1 + 1 + 1 + 1 + 7 + 1 + 1 + 1 + 1) / 9 = 15 / 9 = *~rounded down~* = 1.
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.array.integer image**  
+  An image is stored as a rectangular matrix of non-negative integers.  
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ image.length ≤ 10,
+3 ≤ image[0].length ≤ 10,
+0 ≤ image[i][j] ≤ 255
+```
+
+- **[output]  array.array.integer**  
+  A blurred image.  
+
+## minesweeper
+#### Description
+In the popular **Minesweeper** game you have a board with some mines and those cells that don't contain a mine have a number in it that indicates the total number of mines in the neighboring cells. Starting off with some arrangement of mines we want to create a **Minesweeper** game setup.
+#### Example
+```Javascript
+matrix = [[true, false, false],
+          [false, true, false],
+          [false, false, false]]
+
+minesweeper(matrix) = [[1, 2, 1],
+                       [2, 1, 1],
+                       [1, 1, 1]]
+```
+Check out the image below for better understanding:
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.array.boolean matrix**  
+  A non-empty rectangular matrix consisting of boolean values - *true* if the corresponding cell contains a mine, *false* otherwise.
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ matrix.length ≤ 5,
+2 ≤ matrix[0].length ≤ 5
+```
+
+- **[output]  array.array.integer**  
+  Rectangular *matrix* of the same size as matrix each cell of which contains an integer equal to the number of mines in the neighboring cells. Two cells are called neighboring if they share at least one corner.  
+
+## arrayReplace
+#### Description
+Given an array of integers, replace all the occurrences of *elemToReplace* with *substitutionElem*.
+
+#### Example
+```Javascript
+inputArray = [1, 2, 1]
+elemToReplace = 1
+substitutionElem = 3
+arrayReplace(inputArray, elemToReplace, substitutionElem) = [3, 2, 3]
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer inputArray**  
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ inputArray.length ≤ 10,
+0 ≤ inputArray[i] ≤ 10
+```
+- **[input] integer elemToReplace**  
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ elemToReplace ≤ 10
+```
+- **[input] integer substitutionElem**  
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ substitutionElem ≤ 10
+```
+- **[output]  array.integer**  
+
+
+## evenDigitsOnly
+#### Description
+Check if all digits of the given integer are even.  
+#### Example
+```Javascript
+// Example 1
+n = 248622
+evenDigitsOnly(n) = true
+
+// Example 2
+n = 642386
+evenDigitsOnly(n) = false
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer n**  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ n ≤ 10^9
+```
+
+- **[output]  boolean**  
+  *true* if all digits of n** are even, *false* otherwise.
+
+## variableName
+#### Description
+Correct variable names consist only of Latin letters, digits and underscores and they can't start with a digit.
+
+Check if the given string is a correct variable name.  
+#### Example
+```Javascript
+// Example 1
+name = "var_1__Int"
+variableName(name) = true
+
+// Example 2
+name = "qq-q"
+variableName(name) = false
+
+// Example 3
+name = "2w2"
+variableName(name) = false
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string name**  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ name.length ≤ 10
+```
+
+- **[output]  boolean**  
+  *true* if *name* is a correct variable name, *false* otherwise.  
+
+## alphabeticShift
+#### Description
+Given a string, replace each its character by the next one in the English alphabet (*z* would be replaced by *a*).
+#### Example
+```Javascript
+// Example 1
+inputString = "crazy"
+alphabeticShift(inputString) = "dsbaz"
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string inputString**  
+  Non-empty string consisting of lowercase English characters.  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ inputString.length ≤ 10
+```
+
+- **[output]  string**  
+  The result string after replacing all of its characters.  
+
+## chessBoardCellColor
+#### Description
+Given two cells on the standard chess board, determine whether they have the same color or not.
+#### Example
+```Javascript
+// Example 1
+cell1 = "A1"
+cell2 = "C3"
+chessBoardCellColor(cell1, cell2) = true
+```
+Image 1:
+```Javascript
+// Example 2
+cell1 = "A1"
+cell2 = "H3"
+chessBoardCellColor(cell1, cell2) = false
+```
+Image 2:
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string cell1**  
+- **[input] string cell2**
+- **[output]  boolean**  
+  *true* if both cells have the same color, *false* otherwise.  
+
+
+## circleOfNumbers
+#### Description
+Consider integer numbers from *0* to *n - 1* written down along the circle in such a way that the distance between any two neighbouring numbers is equal (note that (*0* and *n - 1* are neighbouring, too).
+
+Given *n* and *firstNumber*, find the number which is written in the radially opposite position to *firstNumber*.
+#### Example
+```Javascript
+// Example 1
+n = 10
+firstNumber = 2
+circleOfNumbers(n, firstNumber) = 7
+```
+Image:
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer n**  
+  A positive **even** integer.  
+
+  *Guaranteed constraints:*
+```Javascript
+4 ≤ n ≤ 20
+```
+- **[input] integer firstNumber**  
+
+  *Guaranteed constraints:*
+```Javascript
+0 ≤ firstNumber ≤ n - 1
+```
+- **[output]  integer**  
+
+## depositProfit
+#### Description
+You have deposited a specific amount of dollars into your bank account. Each year your balance increases at the same growth *rate*. Find out how long it would take for your balance to pass a specific *threshold* with the assumption that you don't make any additional deposits.
+#### Example
+```Javascript
+deposit = 100
+rate = 20
+threshold = 170
+depositProfit(deposit, rate, threshold) = 3
+```
+Each year the amount of money on your account increases by *20%*. It means that throughout the years your balance would be:
+- year 0: 100;
+- year 1: 120;
+- year 2: 144;
+- year 3: 172,8.  
+
+Thus, it will take *3* years for your balance to pass the *threshold*, which is the answer.
+
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer deposit**  
+  The initial deposit as a positive integer.
+
+  *Guaranteed constraints:*
+```Javascript
+41 ≤ deposit ≤ 100
+```
+- **[input] integer rate**  
+    The rate of increase. Each year the balance increases by the rate percent of the current sum.  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ rate ≤ 100.
+```
+- **[output]  integer**  
+   The number of years it would take to hit the *threshold*.  
+
+
 ## stringsRearrangement
 ## variableName
 ## absoluteValuesSumMinimization
