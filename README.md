@@ -103,6 +103,29 @@ An array of integers containing at least two elements.
 The largest product of adjacent elements.
 
 ## allLongestStrings
+#### Description
+
+Given an array of strings, return another array containing all of its longest strings.
+
+#### Example
+```Javascript
+inputArray = ["aba", "aa", "ad", "vcd", "aba"]
+allLongestStrings(inputArray) = ["aba", "vcd", "aba"]
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)** <br>
+- **[input] array.string inputArray** <br>
+    A non-empty array. <br>
+*Guaranteed constraints:*
+```Javascript
+1 ≤ inputArray.length ≤ 10
+1 ≤ inputArray[i].length ≤ 10
+```
+
+- **[output] array.string** <br>
+Array of the longest strings, stored in the same order as in the *inputArray*.
+
 ## almostIncreasingSequence
 #### Description
 
@@ -256,7 +279,7 @@ An array of distinct non-negative integers.
 The minimal number of statues that need to be added to existing statues such that it contains every integer size from an interval [L, R] (for some L, R) and no other sizes.
 
 ## matrixElementsSum
-### Description
+#### Description
 After becoming famous, CodeBots decided to move to a new building and live together. The building is represented by a rectangular matrix of rooms, each cell containing an integer - the price of the room. Some rooms are free (their cost is 0), but that's probably because they are haunted, so all the bots are afraid of them. That is why any room that is free or is located anywhere below a free room in the same column is not considered suitable for the bots.
 
 Help the bots calculate the total price of all the rooms that are suitable for them.
@@ -295,7 +318,7 @@ Thus, the answer is: 1 + 5 + 1 + 2 = 9.
 ## palindromeRearranging
 ## reverseParentheses
 ## shapeArea
-### Description
+#### Description
 Below we will define an n-interesting polygon. Your task is to find the area of a polygon for a given n.
 
 A 1-interesting polygon is just a square with a side of length 1. An n-interesting polygon is obtained by taking the n - 1-interesting polygon and appending 1-interesting polygons to its rim, side by side. You can see the 1-, 2-, 3- and 4-interesting polygons in the picture below.
