@@ -55,14 +55,15 @@ add(param1, param2) = 3.
 #### Input/Output
 
 - **[time limit] 3000ms (java)**
-- **[input] integer param1** <br>
-*Guaranteed constraints:* 
+- **[input] integer param1**
+
+    *Guaranteed constraints:* 
 ```Javascript
 -100 ≤ param1 ≤ 1000
 ```
 - **[input] integer param2** <br>
 
-*Guaranteed constraints:* 
+    *Guaranteed constraints:* 
 ```Javascript
 -100 ≤ param2 ≤ 1000
 ```
@@ -90,7 +91,7 @@ adjacentElementsProduct(inputArray) = 21
 
 An array of integers containing at least two elements.
 
-*Guaranteed constraints:* <br>
+    *Guaranteed constraints:*
 ```Javascript
 2 ≤ inputArray.length ≤ 10
 -1000 ≤ inputArray[i] ≤ 1000
@@ -136,7 +137,7 @@ centuryFromYear(year) = 17
 
 A positive integer, designating the year.
 
-*Guaranteed constraints:* <br>
+    *Guaranteed constraints:*
 ```Javascript
 1 ≤ year ≤ 2005.
 ```
@@ -171,7 +172,7 @@ checkPalindrome(inputString) = true;
 
 A non-empty string consisting of lowercase characters.
 
-*Guaranteed constraints:* <br>
+    *Guaranteed constraints:*
 ```Javascript
 1 ≤ inputString.length ≤ 105
 ```
@@ -205,7 +206,7 @@ makeArrayConsecutive2(statues) = 3```
 
 An array of distinct non-negative integers.
 
-*Guaranteed constraints:* <br>
+    *Guaranteed constraints:* 
 ```Javascript
 1 ≤ statues.length ≤ 10
 0 ≤ statues[i] ≤ 20
@@ -238,7 +239,8 @@ shapeArea(n) = 13
 
 - **[time limit] 3000ms (java)** <br>
 - **[input] integer n** <br>
-*Guaranteed constraints:* <br>
+
+    *Guaranteed constraints:*
 ```Javascript
 1 ≤ n < 104
 ```
