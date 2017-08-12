@@ -275,9 +275,7 @@ Here's the rooms matrix with unsuitable rooms marked with 'x':
 [x, 5, x, x], 
 [x, x, x, x]]
 ```
-Thus, the answer is: 
-```Javascript 1 + 5 + 1 + 2 = 9.
-```
+Thus, the answer is: 1 + 5 + 1 + 2 = 9.
 #### Input/Output
 
 - **[time limit] 3000ms (java)** <br>
