@@ -56,12 +56,12 @@ add(param1, param2) = 3.
 
 - **[time limit] 3000ms (java)**
 - **[input] integer param1** <br>
-*Guaranteed constraints:* <br>
+*Guaranteed constraints:* 
 ```Javascript
 -100 ≤ param1 ≤ 1000
 ```
 - **[input] integer param2** <br>
-*Guaranteed constraints:* <br>
+*Guaranteed constraints:* 
 ```Javascript
 -100 ≤ param2 ≤ 1000
 ```
