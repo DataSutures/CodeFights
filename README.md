@@ -61,6 +61,7 @@ add(param1, param2) = 3.
 -100 ≤ param1 ≤ 1000
 ```
 - **[input] integer param2** <br>
+
 *Guaranteed constraints:* 
 ```Javascript
 -100 ≤ param2 ≤ 1000
