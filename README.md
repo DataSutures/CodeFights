@@ -280,7 +280,8 @@ Thus, the answer is: 1 + 5 + 1 + 2 = 9.
 
 - **[time limit] 3000ms (java)** <br>
 - **[input]  array.array.integer matrix** <br>
-    2-dimensional array of integers representing a rectangular matrix of the building.
+    2-dimensional array of integers representing a rectangular matrix of the building. <br>
+
 *Guaranteed constraints:*
 ```Javascript
 1 ≤ matrix.length ≤ 5
