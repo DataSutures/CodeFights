@@ -1371,9 +1371,7 @@ bishopAndPawn(bishop, pawn) = false
 
 - **[time limit] 3000ms (java)**  
 - **[input] string bishop**  
-Coordinates of the white bishop in the [chess notation](keyword://chess-notation).
+Coordinates of the white bishop in the [chess notation](keyword://chess-notation "chess notation").
 - **[input] string pawn**
 Coordinates of the black pawn in the same notation.
 - **[output]  boolean**  
-
-  
