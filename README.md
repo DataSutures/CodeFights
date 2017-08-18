@@ -1,5 +1,5 @@
 # CodeFights
-Solutions for challenges proposed on CodeFights.com/arcade
+Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arcade "codefights")
 
 ## Challenges
 
@@ -50,7 +50,15 @@ Solutions for challenges proposed on CodeFights.com/arcade
 45. [buildPalindrome](#buildpalindrome)  
 46. [electionsWinners](#electionswinners)  
 47. [isMAC48Address](#ismac48address)  
-48. [lineEncoding](#lineencoding)  
+48. [lineEncoding](#lineencoding)
+49. [chessKnight](#chessknight)
+50. [deleteDigit](#deletedigit)
+51. [longestWord](#longestword)
+52. [validTime](#validtime)
+53. [sumUpNumbers](#sumupnumbers)
+54. [differentSquares](#differentsquares)
+55. [digitsProduct](#digitsproduct)
+56. [fileNaming](#filenaming)  
 
 
 ## add
@@ -1451,7 +1459,7 @@ findEmailDomain(address) = "example.org"
 
 - **[output]  string**  
 
-## findEmailDomain
+## buildPalindrome
 #### Description
 Given a string, find the shortest possible string which can be achieved by adding characters to the end of initial string to make it a [palindrome](https://en.wikipedia.org/wiki/Palindrome "Palindrome").
 
@@ -1596,6 +1604,7 @@ lineEncoding(s) = "2a3bc"
 - **[time limit] 3000ms (java)**
 - **[input] string s**  
 String consisting of lowercase English letters.  
+  *Guaranteed constraints:*  
 ```Javascript
 4 ≤ s.length ≤ 15
 ```
@@ -1626,6 +1635,272 @@ chessKnight(cell) = 6
 
 - **[time limit] 3000ms (java)**
 - **[input] string cell**  
-String consisting of 2 letters - coordinates of the knight on an 8 × 8 chessboard in [Chess Notation](####chessnotation).
+  String consisting of 2 letters - coordinates of the knight on an *8 × 8* chessboard in chess notation.  
+  **Chess Notation:**
+  ![chessNotation](images/chessNotation.png)
+
+- **[output]  integer**  
+
+## deleteDigit
+#### Description
+Given some integer, find the maximal number you can obtain by deleting exactly one digit of the given number.  
+#### Example
+```Javascript
+// Example 1
+n = 152
+deleteDigit(n) = 52
+
+// Example
+n = 1001
+deleteDigit(n) = 101
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer n**  
+     *Guaranteed contraints:*
+```Javascript
+10 ≤ n ≤ 10^6
+```
+
+- **[output]  integer**  
+
+## longestWord
+#### Description
+Define a *word* as a sequence of consecutive English letters. Find the longest *word* from the given string.
+#### Example
+```Javascript
+text = "Ready, steady, go!"
+longestWord(text) = "steady"
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string text**  
+    *Guaranteed constraints:*
+```Javascript
+4 ≤ text.length ≤ 50
+```
+
+- **[output]  string**  
+  The longest *word* from *text*. It's guaranteed that there is a unique output.  
+
+## validTime
+#### Description
+Check if the given string is a correct time representation of the 24-hour clock.  
+#### Example
+```Javascript
+// Example 1
+time = "13:58"
+validTime(time) = true
+
+// Example 2
+time = "25:51"
+validTime(time) = false
+
+// Example 3
+time = "02:76"
+validTime(time) = false
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string time**  
+  A string representing time in *HH:MM* format. It is guaranteed that the first two characters, as well as the last two characters, are digits.  
+
+- **[output]  boolean**  
+  *true* if the given representation is correct, *false* otherwise.  
+
+## sumUpNumbers
+#### Description
+CodeMaster has just returned from shopping. He scanned the check of the items he bought and gave the resulting string to Ratiorg to figure out the total number of purchased items. Since Ratiorg is a bot he is definitely going to automate it, so he needs a program that sums up all the numbers which appear in the given input.
+
+Help Ratiorg by writing a function that returns the sum of numbers that appear in the given *inputString*.  
+
+#### Example
+```Javascript
+inputString = "2 apples, 12 oranges"
+sumUpNumbers(inputString) = 14
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string inputString**  
+    *Guaranteed constraints:*
+```Javascript
+6 ≤ inputString.length ≤ 60
+```
 
 - **[output]  integer**
+
+## differentSquares  
+#### Description
+Given a rectangular matrix containing only digits, calculate the number of different *2 × 2* squares in it.  
+
+#### Example
+```Javascript
+matrix = [[1, 2, 1],
+          [2, 2, 2],
+          [2, 2, 2],
+          [1, 2, 3],
+          [2, 2, 1]]
+
+differentSquares(matrix) = 6.
+```
+Here are all 6 different 2 × 2 squares:  
+  - 1 2  
+    2 2  
+  - 2 1  
+    2 2  
+  - 2 2  
+    2 2  
+  - 2 2  
+    1 2  
+  - 2 2  
+    2 3  
+  - 2 3  
+    2 1  
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] array.array.integer matrix**  
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ matrix.length ≤ 100,
+1 ≤ matrix[i].length ≤ 100,
+0 ≤ matrix[i][j] ≤ 9
+```
+
+- **[output]  integer**  
+   The number of different *2 × 2* squares in *matrix*.  
+
+## digitsProduct  
+#### Description
+Given an integer *product*, find the *smallest* **positive** (i.e. greater than *0*) integer the product of whose digits is equal to *product*. If there is no such integer, return *-1* instead.
+#### Example
+```Javascript
+// Example 1
+product = 12
+digitsProduct(product) = 26
+
+// Example 2
+product = 19
+digitsProduct(product) = -1
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer product**  
+    *Guaranteed constraints:*
+```Javascript
+0 ≤ product ≤ 600
+```
+
+- **[output]  integer**  
+
+## fileNaming
+#### Description
+You are given an array of desired filenames in the order of their creation. Since two files cannot have equal names, the one which comes later will have an addition to its name in a form of (*k*), where *k* is the smallest positive integer such that the obtained name is not used yet.
+
+Return an array of names that will be given to the files.  
+
+#### Example
+```Javascript
+// Example 1
+names = ["doc", "doc", "image", "doc(1)", "doc"]
+fileNaming(names) = ["doc", "doc(1)", "image", "doc(1)(1)", "doc(2)"]
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] array.string names**  
+    *Guaranteed constraints:*
+```Javascript
+5 ≤ names.length ≤ 15,
+1 ≤ names[i].length ≤ 15
+```
+
+- **[output] array.string**  
+
+## messageFromBinaryCode
+#### Description
+You are taking part in an Escape Room challenge designed specifically for programmers. In your efforts to find a clue, you've found a binary code written on the wall behind a vase, and realized that it must be an encrypted message. After some thought, your first guess is that each consecutive 8 bits of the code stand for the character with the corresponding [extended ASCII code](http://www.ascii-code.com/ "ASCII").  
+
+Assuming that your hunch is correct, decode the message.  
+#### Example
+```Javascript
+code = "010010000110010101101100011011000110111100100001"  
+messageFromBinaryCode(code) = "Hello!"
+```
+The first *8* characters of the code are *01001000*, which is *72* in the binary numeral system. *72* stands for *H* in the ASCII-table, so the first letter is *H*.  
+Other letters can be obtained in the same manner.  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string code**  
+    *Guaranteed constraints:*
+```Javascript
+0 < code.length < 800
+```
+
+- **[output] string**  
+    The decrypted message.  
+
+## spiralNumbers  
+#### Description
+Construct a square matrix with a size N × N containing integers from 1 to N * N in a spiral order, starting from top-left and in clockwise direction.  
+
+#### Example
+```Javascript
+n = 3
+spiralNumbers(n) = [[1, 2, 3],
+                    [8, 9, 4],
+                    [7, 6, 5]]
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer n**
+   Matrix size, a positive integer.  
+    *Guaranteed constraints:*
+```Javascript
+3 ≤ n ≤ 10
+```
+
+- **[output] array.array.integer**  
+
+## sudoku  
+#### Description
+*Sudoku* is a number-placement puzzle. The objective is to fill a 9 × 9 grid with digits so that each column, each row, and each of the nine 3 × 3 sub-grids that compose the grid contains all of the digits from 1 to 9.
+
+This algorithm should check if the given grid of numbers represents a correct solution to Sudoku.  
+#### Example
+For the first example below, the output should be true. For the other grid, the output should be false: each of the nine 3 × 3 sub-grids should contain all of the digits from 1 to 9.  
+![sudoku](images/sudoku.png)
+```Javascript
+n = 3
+spiralNumbers(n) = [[1, 2, 3],
+                    [8, 9, 4],
+                    [7, 6, 5]]
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] array.array.integer grid**
+   A matrix representing *9 × 9* grid already filled with numbers from *1* to *9*.  
+    *Guaranteed constraints:*
+```Javascript
+3 ≤ n ≤ 10
+```
+
+- **[output] boolean**  
+    *true* if the given grid represents a correct solution to Sudoku, *false* otherwise.  
