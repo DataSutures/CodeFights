@@ -719,7 +719,7 @@ avoidObstacles(inputArray) = 4
 ```
 Check out the image below for better understanding:
 
-![allt text](https://codefightsuserpics.s3.amazonaws.com/tasks/avoidObstacles/img/example.png?_tm=1490625560816)
+![avoidObstacles](images/avoidObstacles.png)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
