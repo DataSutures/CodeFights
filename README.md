@@ -182,7 +182,7 @@ adjacentElementsProduct(inputArray) = 21
 Below we will define an n-interesting polygon. Your task is to find the area of a polygon for a given n.
 
 A 1-interesting polygon is just a square with a side of length 1. An n-interesting polygon is obtained by taking the n - 1-interesting polygon and appending 1-interesting polygons to its rim, side by side. You can see the 1-, 2-, 3- and 4-interesting polygons in the picture below.
-![alt text](https://codefightsuserpics.s3.amazonaws.com/tasks/shapeArea/img/area.png?_tm=1491302317375)
+![shapeArea](images/shapeArea.png)
 #### Example
 
 ```Javascript
@@ -783,7 +783,7 @@ minesweeper(matrix) = [[1, 2, 1],
 ```
 Check out the image below for better understanding:
 
-![minesweeper](https://codefightsuserpics.s3.amazonaws.com/tasks/minesweeper/img/example.png?_tm=1490636350838)
+![minesweeper](images/minesweeper.png)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -926,14 +926,14 @@ cell1 = "A1"
 cell2 = "C3"
 chessBoardCellColor(cell1, cell2) = true
 ```
-![chessExample1](https://codefightsuserpics.s3.amazonaws.com/tasks/chessBoardCellColor/img/example1.png?_tm=1494338560912)
+![chessBoardCellColor1](images/chessBoardCellColor1.png)
 ```Javascript
 // Example 2
 cell1 = "A1"
 cell2 = "H3"
 chessBoardCellColor(cell1, cell2) = false
 ```
-![alt text](https://codefightsuserpics.s3.amazonaws.com/tasks/chessBoardCellColor/img/example2.png?_tm=1494338561188)
+![chessBoardCellColor2](images/chessBoardCellColor2.png)  
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -955,7 +955,7 @@ n = 10
 firstNumber = 2
 circleOfNumbers(n, firstNumber) = 7
 ```
-![alt text](https://codefightsuserpics.s3.amazonaws.com/tasks/circleOfNumbers/img/example.png?_tm=1490625697098)
+![circleOfNumbers](images/circleOfNumbers.png)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -1348,7 +1348,7 @@ digitDegree(n) = 2;
 Given the positions of a white *bishop* and a black *pawn* on the standard chess board, determine whether the bishop can capture the pawn in one move.
 
 The bishop has no restrictions in distance for each move, but is limited to diagonal movement. Check out the example below to see how it can move:
-![bishopPawn1](https://codefightsuserpics.s3.amazonaws.com/tasks/bishopAndPawn/img/bishop.jpg?_tm=1493360096740)
+![bishopPawn1](images/bishopAndPawn1.jpg)
 
 #### Example
 ```Javascript
@@ -1357,21 +1357,23 @@ bishop = "a1"
 pawn = "c3"
 bishopAndPawn(bishop, pawn) = true
 ```
-![bishopPawn2](https://codefightsuserpics.s3.amazonaws.com/tasks/bishopAndPawn/img/ex1.jpg?_tm=1493360096945)
+![bishopPawn2](bishopAndPawn2.jpg)
 ```Javascript
 // Example 2
 bishop = "h1"
 pawn = "h3"
 bishopAndPawn(bishop, pawn) = false
 ```
-![bishopPawn3](https://codefightsuserpics.s3.amazonaws.com/tasks/bishopAndPawn/img/ex2.jpg?_tm=1493360097459)
+![bishopPawn3](bishopAndPawn3.jpg)
 
 
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
 - **[input] string bishop**  
-Coordinates of the white bishop in the [chess notation](keyword://chess-notation "chess notation").
+Coordinates of the white bishop in the chess notation.  
+Chess Notation:  
+![chessNotation](images/chessNotation.png)
 - **[input] string pawn**
 Coordinates of the black pawn in the same notation.
 - **[output]  boolean**  
