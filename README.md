@@ -44,8 +44,13 @@ Solutions for challenges proposed on CodeFights.com/arcade
 39. [knapsackLight](#knapsacklight)  
 40. [longestDigitsPrefix](#longestdigitsprefix)
 41. [digitDegree](#digitdegree)
-42. [bishopAndPawn](#bishopandpawn)  
-
+42. [bishopAndPawn](#bishopandpawn)
+43. [isBeautifulString](#isbeautifulstring)
+44. [findEmailDomain](#findEmailDomain)  
+45. [buildPalindrome](#buildpalindrome)  
+46. [electionsWinners](#electionswinners)  
+47. [isMAC48Address](#ismac48address)  
+48. [lineEncoding](#lineencoding)  
 
 
 ## add
@@ -1372,8 +1377,255 @@ bishopAndPawn(bishop, pawn) = false
 - **[time limit] 3000ms (java)**  
 - **[input] string bishop**  
 Coordinates of the white bishop in the chess notation.  
-Chess Notation:  
+#### **Chess Notation:**  
 ![chessNotation](images/chessNotation.png)
-- **[input] string pawn**
+- **[input] string pawn**  
 Coordinates of the black pawn in the same notation.
 - **[output]  boolean**  
+
+## isBeautifulString
+#### Description
+A string is said to be *beautiful* if *b* occurs in it no more times than *a*; *c* occurs in it no more times than *b*; etc.
+
+Given a string, check whether it is *beautiful*.  
+
+#### Example
+```Javascript
+// Example 1
+inputString = "bbbaacdafe";
+isBeautifulString(inputString) = true;
+
+// Example 2
+inputString = "aabbb";
+isBeautifulString(inputString) = false;
+
+// Example 3
+inputString = "bbc";
+isBeautifulString(inputString) = false;
+```
+
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string inputString**  
+A string of lowercase letters.  
+
+    *Guaranteed constraints:*
+```Javascript
+3 ≤ inputString.length ≤ 50
+```
+
+- **[output]  boolean**
+
+## findEmailDomain
+#### Description
+An email address such as "John.Smith@example.com" is made up of a local part ("John.Smith"), an "@" symbol, then a domain part ("example.com").
+
+The domain name part of an email address may only consist of letters, digits, hyphens and dots. The local part, however, also allows a lot of different special characters. [Here](https://en.wikipedia.org/wiki/Email_address#Examples "Here") you can look at several examples of correct and incorrect email addresses.
+
+Given a valid email address, find its domain part.  
+
+#### Example
+```Javascript
+// Example 1
+address = "prettyandsimple@example.com"
+findEmailDomain(address) = "example.com"
+
+// Example 2
+address = "<>[]:,;@\"!#$%&*+-/=?^_{}| ~.a\"@example.org"
+findEmailDomain(address) = "example.org"
+
+```
+
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string address**  
+
+  *Guaranteed constraints:*
+```Javascript
+10 ≤ address.length ≤ 50
+```
+
+- **[output]  string**  
+
+## findEmailDomain
+#### Description
+Given a string, find the shortest possible string which can be achieved by adding characters to the end of initial string to make it a [palindrome](https://en.wikipedia.org/wiki/Palindrome "Palindrome").
+
+#### Example
+```Javascript
+st = "abcdc"
+buildPalindrome(st) = "abcdcba"
+
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string st**  
+A string consisting of lowercase latin letters.
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ st.length ≤ 10
+```
+
+- **[output]  string**
+
+## electionsWinners
+#### Description
+Elections are in progress!
+
+Given an array of the numbers of votes given to each of the candidates so far, and an integer k equal to the number of voters who haven't cast their vote yet, find the number of candidates who still have a chance to win the election.
+
+The winner of the election must secure strictly more votes than any other candidate. If two or more candidates receive the same (maximum) number of votes, assume there is no winner at all.
+
+#### Example
+```Javascript
+votes = [2, 3, 5, 2]
+k = 3
+electionsWinners(votes, k) = 2
+```
+- The first candidate got *2* votes. Even if all of the remaining *3* candidates vote for him, he will still have only *5* votes, i.e. the same number as the third candidate, so there will be no winner.  
+- The second candidate can win if all the remaining candidates vote for him (3 + 3 = 6 > 5).  
+- The third candidate can win even if none of the remaining candidates vote for him. For example, if each of the remaining voters cast their votes for each of his opponents, he will still be the winner (the *votes* array will thus be [3, 4, 5, 3]).  
+- The last candidate can't win no matter what (for the same reason as the first candidate).  
+Thus, only *2* candidates can win (the second and the third), which is the answer.
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] array.integer votes**  
+A non-empty array of non-negative integers. Its *ith* element denotes the number of votes cast for the *ith* candidate.
+*Guaranteed constraints:*
+```Javascript
+4 ≤ votes.length ≤ 10^5,
+0 ≤ votes[i] ≤ 10^4
+```
+- **[input] integer k**
+The number of voters who haven't cast their vote yet.
+*Guaranteed constraints:*
+```Javascript
+0 ≤ k ≤ 10^5
+```
+
+- **[output]  integer**
+
+## isMAC48Address
+#### Description
+A media access control address (MAC address) is a unique identifier assigned to network interfaces for communications on the physical network segment.
+
+The standard (IEEE 802) format for printing MAC-48 addresses in human-friendly form is six groups of two hexadecimal digits (*0* to *9* or *A* to *F*), separated by hyphens (e.g. *01-23-45-67-89-AB*).
+
+Your task is to check by given string inputString whether it corresponds to MAC-48 address or not.
+
+#### Example
+```Javascript
+// Example 2
+inputString = "00-1B-63-84-45-E6"
+isMAC48Address(inputString) = true
+
+// Example 2
+inputString = "Z1-1B-63-84-45-E6"
+isMAC48Address(inputString) = false
+
+// Example 3
+inputString = "not a MAC-48 address"
+isMAC48Address(inputString) = false
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string inputString**
+
+  *Guaranteed constraints:*
+```Javascript
+15 ≤ inputString.length ≤ 20
+```
+
+- **[output]  boolean**  
+*true* if *inputString* corresponds to MAC-48 address naming rules, *false* otherwise.  
+
+## isDigit
+#### Description
+Determine if the given character is a digit or not.
+
+#### Example
+```Javascript
+// Example 1
+symbol = '0'
+isDigit(symbol) = true  
+
+// Example 2
+symbol = '-'
+isDigit(symbol) = false
+
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] char symbol**  
+A character which is either a digit or not.
+
+- **[output]  boolean**  
+*true* if *symbol* is a digit, *false* otherwise.
+
+## lineEncoding
+#### Description
+Given a string, return its encoding defined as follows:
+
++ First, the string is divided into the least possible number of disjoint substrings consisting of identical characters  
+  - for example, "aabbbc" is divided into ["aa", "bbb", "c"]
++ Next, each substring with length greater than one is replaced with a concatenation of its length and the repeating character
+  - for example, substring "bbb" is replaced by "3b"
++ Finally, all the new strings are concatenated together in the same order and a new string is returned.
+
+#### Example
+```Javascript
+s = "aabbbc"
+lineEncoding(s) = "2a3bc"
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string s**  
+String consisting of lowercase English letters.  
+```Javascript
+4 ≤ s.length ≤ 15
+```
+
+- **[output]  string**  
+Encoded version of *s*.  
+
+## chessKnight
+#### Description
+Given a position of a knight on the standard chessboard, find the number of different moves the knight can perform.
+
+The knight can move to a square that is two squares horizontally and one square vertically, or two squares vertically and one square horizontally away from it. The complete move therefore looks like the letter L. Check out the image below to see all valid moves for a knight piece that is placed on one of the central squares.
+![chessKnight1](images/chessKnight1.jpg)
+#### Example
+```Javascript
+// Example 1
+cell = "a1"
+chessKnight(cell) = 2  
+```
+![chessKnight2](images/chessKnight2.jpg)
+```Javascript
+// Example 2
+cell = "c2"
+chessKnight(cell) = 6
+```
+![chessKnight3](images/chessKnight3.jpg)
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] string cell**  
+String consisting of 2 letters - coordinates of the knight on an 8 × 8 chessboard in [Chess Notation](####chessnotation).
+
+- **[output]  integer**
