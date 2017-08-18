@@ -3,7 +3,7 @@ Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arc
 ## Arcade
 > [Intro](#intro)  
 > [Databases](#databases)  
-> [The Core](#the core)  
+> [The Core](#thecore)  
 > [Python](#python)  
 > [Graphs](#graphs)  
 
