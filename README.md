@@ -44,7 +44,7 @@ Solutions for challenges proposed on CodeFights.com/arcade
 39. [knapsackLight](#knapsacklight)  
 40. [longestDigitsPrefix](#longestdigitsprefix)
 41. [digitDegree](#digitdegree)
-42. [bishopAndPawn](#bishopAndPawn)  
+42. [bishopAndPawn](#bishopandpawn)  
 
 
 
