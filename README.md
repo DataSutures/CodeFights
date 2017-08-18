@@ -1,7 +1,13 @@
 # CodeFights
 Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arcade "codefights")
+## Arcade
+> #### [Intro](##intro)
+> #### [Databases](##databases)
+> #### [The Core](##thecore)
+> #### [Python](##python)
+> #### [Graphs](##graphs)
 
-## Challenges
+## Intro
 
 1. [add](#add)
 2. [centuryFromYear](#centuryfromyear)
@@ -58,8 +64,23 @@ Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arc
 53. [sumUpNumbers](#sumupnumbers)
 54. [differentSquares](#differentsquares)
 55. [digitsProduct](#digitsproduct)
-56. [fileNaming](#filenaming)  
+56. [fileNaming](#filenaming)
 
+## Databases (Coming Soon)
+1. [projectList](#projectlist)  
+2. [countriesSelection](#countriesselection)  
+3. [monthlyScholarships](#monthlyscholarships)  
+4. [projectsTeam](#projectsteam)  
+5. [automaticNotifications](#automaticnotifications)  
+6. [volleyballResults](#volleyballresults)  
+7. [mostExpensive](#mostexpensive)  
+8. [contestLeaderboard](#contestleaderboard)  
+9. [gradeDistribution](#gradedistribution)  
+10. [mischievousNephews](#mischievousnephews)  
+
+## The Core    
+## Python  
+## Graphs
 
 ## add
 #### Description
