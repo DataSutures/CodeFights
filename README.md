@@ -1357,14 +1357,14 @@ bishop = "a1"
 pawn = "c3"
 bishopAndPawn(bishop, pawn) = true
 ```
-![bishopPawn2](bishopAndPawn2.jpg)
+![bishopPawn2](images/bishopAndPawn2.jpg)
 ```Javascript
 // Example 2
 bishop = "h1"
 pawn = "h3"
 bishopAndPawn(bishop, pawn) = false
 ```
-![bishopPawn3](bishopAndPawn3.jpg)
+![bishopPawn3](images/bishopAndPawn3.jpg)
 
 
 #### Input/Output
