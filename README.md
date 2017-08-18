@@ -36,6 +36,16 @@ Solutions for challenges proposed on CodeFights.com/arcade
 31. [depositProfit](#depositprofit)
 32. [absoluteValuesSumMinimization](#absolutevaluessumminimization)
 33. [stringsRearrangement](#stringsrearrangement)
+34. [extractEachKth](#extracteachkth)  
+35. [firstDigit](#firstdigit)  
+36. [differentSymbolsNaive](#differentsymbolsnaive)
+37. [arrayMaxConsecutiveSum](#arraymaxconsecutivesum)  
+38. [growingPlant](#growingplant)  
+39. [knapsackLight](#knapsacklight)  
+40. [longestDigitsPrefix](#longestdigitsprefix)
+41. [digitDegree](#digitdegree)
+42. [bishopAndPawn](#bishopAndPawn)  
+
 
 
 ## add
@@ -172,6 +182,7 @@ adjacentElementsProduct(inputArray) = 21
 Below we will define an n-interesting polygon. Your task is to find the area of a polygon for a given n.
 
 A 1-interesting polygon is just a square with a side of length 1. An n-interesting polygon is obtained by taking the n - 1-interesting polygon and appending 1-interesting polygons to its rim, side by side. You can see the 1-, 2-, 3- and 4-interesting polygons in the picture below.
+![alt text](https://codefightsuserpics.s3.amazonaws.com/tasks/shapeArea/img/area.png?_tm=1491302317375)
 #### Example
 
 ```Javascript
@@ -707,6 +718,8 @@ inputArray = [5, 3, 6, 7, 9]
 avoidObstacles(inputArray) = 4
 ```
 Check out the image below for better understanding:
+
+![allt text](https://codefightsuserpics.s3.amazonaws.com/tasks/avoidObstacles/img/example.png?_tm=1490625560816)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -769,6 +782,8 @@ minesweeper(matrix) = [[1, 2, 1],
                        [1, 1, 1]]
 ```
 Check out the image below for better understanding:
+
+![minesweeper](https://codefightsuserpics.s3.amazonaws.com/tasks/minesweeper/img/example.png?_tm=1490636350838)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -911,14 +926,14 @@ cell1 = "A1"
 cell2 = "C3"
 chessBoardCellColor(cell1, cell2) = true
 ```
-Image 1:
+![chessExample1](https://codefightsuserpics.s3.amazonaws.com/tasks/chessBoardCellColor/img/example1.png?_tm=1494338560912)
 ```Javascript
 // Example 2
 cell1 = "A1"
 cell2 = "H3"
 chessBoardCellColor(cell1, cell2) = false
 ```
-Image 2:
+![alt text](https://codefightsuserpics.s3.amazonaws.com/tasks/chessBoardCellColor/img/example2.png?_tm=1494338561188)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -940,7 +955,7 @@ n = 10
 firstNumber = 2
 circleOfNumbers(n, firstNumber) = 7
 ```
-Image:
+![alt text](https://codefightsuserpics.s3.amazonaws.com/tasks/circleOfNumbers/img/example.png?_tm=1490625697098)
 #### Input/Output
 
 - **[time limit] 3000ms (java)**  
@@ -1054,3 +1069,311 @@ Image:
 1 ≤ inputArray[i].length ≤ 15
 ```
 - **[output]  boolean**  
+
+## extractEachKth
+#### Description
+Given array of integers, remove each *kth* element from it.
+#### Example
+```Javascript
+inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+k = 3
+extractEachKth(inputArray, k) = [1, 2, 4, 5, 7, 8, 10]
+```  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer inputArray**  
+
+  *Guaranteed constraints:*
+```Javascript
+5 ≤ inputArray.length ≤ 15
+-20 ≤ inputArray[i] ≤ 20
+```
+- **[input] integer k**  
+*Guaranteed constraints:*
+```Javascript
+1 ≤ k ≤ 10
+```
+- **[output]  array.integer**  
+*inputArray* without elements k - 1, 2k - 1, 3k - 1 etc.  
+
+## firstDigit
+#### Description
+Find the leftmost digit that occurs in a given string.
+#### Example
+```Javascript
+// Example 1
+inputString = "var_1__Int";
+firstDigit(inputString) = '1';
+
+// Example 2
+inputString = "q2q-q";
+firstDigit(inputString) = '2';
+
+// Example 3
+inputString = "0ss";
+firstDigit(inputString) = '0';
+```  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string inputString**  
+A string containing at least one digit.  
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ inputString.length ≤ 10
+```
+- **[output]  char**  
+
+## differentSymbolsNaive
+#### Description
+Given a string, find the number of different characters in it.
+#### Example
+```Javascript
+s = "cabca";
+differentSymbolsNaive(s) = 3;
+```  
+There are *3* different characters *a*, *b* and *c*.
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string s**  
+A string of lowercase latin letters.
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ s.length ≤ 15
+```
+- **[output]  integer**  
+
+## arrayMaxConsecutiveSum
+#### Description
+Given array of integers, find the maximal possible sum of some of its *k* consecutive elements.
+#### Example
+```Javascript
+inputArray = [2, 3, 5, 1, 6]
+k = 2
+arrayMaxConsecutiveSum(inputArray, k) = 8
+```  
+All possible sums of *2* consecutive elements are:
+```Javascript
+2 + 3 = 5;
+3 + 5 = 8;
+5 + 1 = 6;
+1 + 6 = 7;
+// Thus, the answer is 8.
+```
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] array.integer inputArray**  
+Array of positive integers.  
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ inputArray.length ≤ 10^5
+1 ≤ inputArray[i] ≤ 1000
+```
+- **[input] integer k**  
+An integer (not greater than the length of *inputArray*).  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ k ≤ inputArray.length
+```  
+- **[output]  integer**  
+The maximal possible sum.  
+
+## growingPlant
+#### Description
+Each day a plant is growing by *upSpeed* meters. Each night that plant's height decreases by *downSpeed* meters due to the lack of sun heat. Initially, plant is 0 meters tall. We plant the seed at the beginning of a day. We want to know when the height of the plant will reach a certain level.
+#### Example
+```Javascript
+upSpeed = 100
+downSpeed = 10
+desiredHeight = 910
+growingPlant(upSpeed, downSpeed, desiredHeight) = 10
+```  
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer upSpeed**  
+A positive integer representing the daily growth.  
+
+  *Guaranteed constraints:*
+```Javascript
+5 ≤ upSpeed ≤ 100
+```
+- **[input] integer downSpeed**  
+A positive integer representing the nightly growth.  
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ downSpeed ≤ upSpeed
+```
+
+- **[input]  integer desiredHeight**  
+
+  *Guaranteed constraints:*
+```Javascript
+4 ≤ desiredHeight ≤ 1000
+```  
+- **[output] integer**  
+The number of days that it will take for the plant to reach/pass *desiredHeight* (including the last day in the total count).  
+
+## knapsackLight
+#### Description
+You found two items in a treasure chest! The first item weighs *weight1* and is worth *value1*, and the second item weighs *weight2* and is worth *value2*. What is the total maximum value of the items you can take with you, assuming that your max weight capacity is *maxW* and you can't come back for the items later?
+
+**Note** that there are only two items and you can't bring more than one item of each type, i.e. you can't take two first items or two second items.
+#### Example
+```Javascript
+// Example 1
+value1 = 10
+weight1 = 5
+value2 = 6
+weight2 = 4
+maxW = 8
+knapsackLight(value1, weight1, value2, weight2, maxW) = 10
+// You're strong enough to take both of the items with you.  
+
+// Example 2
+value1 = 10
+weight1 = 5
+value2 = 6
+weight2 = 4
+maxW = 9
+knapsackLight(value1, weight1, value2, weight2, maxW) = 16  
+// You can only carry the first item.  
+
+// Example 3
+value1 = 5
+weight1 = 3
+value2 = 7
+weight2 = 4
+maxW = 6
+knapsackLight(value1, weight1, value2, weight2, maxW) = 7  
+// You can't take both items, but you can take any of them.
+```  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer value1**  
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ value1 ≤ 20
+```
+- **[input] integer weight1**  
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ weight1 ≤ 10
+```  
+- **[input] integer value2**  
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ value2 ≤ 20
+```  
+- **[input] integer weight2**  
+
+  *Guaranteed constraints:*
+```Javascript
+2 ≤ weight2 ≤ 10
+```
+- **[input] integer maxW**  
+
+  *Guaranteed constraints:*
+```Javascript
+1 ≤ maxW ≤ 20
+```
+- **[output]  integer**  
+
+## longestDigitsPrefix
+#### Description
+Given a string, output its longest [prefix](keyword://string-prefix "prefix") which contains only digits.
+#### Example
+```Javascript
+inputString="123aa1";
+longestDigitsPrefix(inputString) = "123";
+```  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string inputString**  
+
+  *Guaranteed constraints:*
+```Javascript
+3 ≤ inputString.length ≤ 35
+```
+- **[output]  string**  
+
+## digitDegree
+#### Description
+Let's define *digit degree* of some positive integer as the number of times we need to replace this number with the sum of its digits until we get to a one digit number.
+
+Given an integer, find its digit degree.
+#### Example
+```Javascript
+// Example 1
+n = 5;
+digitDegree(n) = 0;
+
+// Example 2
+n = 100;
+digitDegree(n) = 1;
+// 1 + 0 + 0 = 1
+
+// Example 3
+n = 91;
+digitDegree(n) = 2;
+// 9 + 1 = 10 -> 1 + 0 = 1  
+```  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] integer n**  
+
+  *Guaranteed constraints:*
+```Javascript
+5 ≤ n ≤ 10^9
+```
+- **[output]  integer**  
+
+## bishopAndPawn
+#### Description
+Given the positions of a white *bishop* and a black *pawn* on the standard chess board, determine whether the bishop can capture the pawn in one move.
+
+The bishop has no restrictions in distance for each move, but is limited to diagonal movement. Check out the example below to see how it can move:
+![bishopPawn1](https://codefightsuserpics.s3.amazonaws.com/tasks/bishopAndPawn/img/bishop.jpg?_tm=1493360096740)
+
+#### Example
+```Javascript
+// Example 1
+bishop = "a1"
+pawn = "c3"
+bishopAndPawn(bishop, pawn) = true
+```
+![bishopPawn2](https://codefightsuserpics.s3.amazonaws.com/tasks/bishopAndPawn/img/ex1.jpg?_tm=1493360096945)
+```Javascript
+// Example 2
+bishop = "h1"
+pawn = "h3"
+bishopAndPawn(bishop, pawn) = false
+```
+![bishopPawn3](https://codefightsuserpics.s3.amazonaws.com/tasks/bishopAndPawn/img/ex2.jpg?_tm=1493360097459)
+
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**  
+- **[input] string bishop**  
+Coordinates of the white bishop in the [chess notation](keyword://chess-notation).
+- **[input] string pawn**
+Coordinates of the black pawn in the same notation.
+- **[output]  boolean**  
+
+  
