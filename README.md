@@ -3,7 +3,7 @@ Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arc
 ## Arcade
 > [Intro](#intro)  
 > [Databases](#databases)  
-> [The Core](#thecore)  
+> [The Core](#the core)  
 > [Python](#python)  
 > [Graphs](#graphs)  
 
@@ -78,7 +78,7 @@ Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arc
 9. [gradeDistribution](#gradedistribution)  
 10. [mischievousNephews](#mischievousnephews)  
 
-## The Core  
+## The Core
 1. [addTwoDigits](#addtwodigits)
 2. [largestNumber](#largestnumber)
 3. [candies](#candies)
