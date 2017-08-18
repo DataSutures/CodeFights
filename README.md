@@ -66,7 +66,7 @@ Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arc
 55. [digitsProduct](#digitsproduct)
 56. [fileNaming](#filenaming)
 
-## Databases (Coming Soon)
+## Databases
 1. [projectList](#projectlist)  
 2. [countriesSelection](#countriesselection)  
 3. [monthlyScholarships](#monthlyscholarships)  
@@ -78,7 +78,26 @@ Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arc
 9. [gradeDistribution](#gradedistribution)  
 10. [mischievousNephews](#mischievousnephews)  
 
-## The Core    
+## The Core  
+1. [addTwoDigits](#addtwodigits)
+2. [largestNumber](#largestnumber)
+3. [candies](#candies)
+4. [seatsInTheater](#seatsintheater)
+5. [maxMultiple](#maxmultiple)
+6. [circleOfNumbers](#circleofnumbers)
+7. [lateRide](#lateride)
+8. [phoneCall](#phonecall)  
+9. [reachNextLevel](#reachnextlevel)
+10. [knapsackLight](#knapsacklight)
+11. [extraNumber](#extranumber)  
+12. [isInfiniteProcess](#isinfiniteprocess)  
+13. [arithmeticExpression](#arithmeticexpression)  
+14. [tennisSet](#tennisset)  
+15. [willYou](#willyou)  
+16. [metroCard](#metrocard)
+
+
+
 ## Python  
 ## Graphs
 
@@ -1891,7 +1910,7 @@ spiralNumbers(n) = [[1, 2, 3],
 - **[time limit] 3000ms (java)**
 - **[input] integer n**
    Matrix size, a positive integer.  
-    *Guaranteed constraints:*
+    *Guaranteed constraints:*  
 ```Javascript
 3 ≤ n ≤ 10
 ```
@@ -1916,7 +1935,7 @@ spiralNumbers(n) = [[1, 2, 3],
 #### Input/Output
 
 - **[time limit] 3000ms (java)**
-- **[input] array.array.integer grid**
+- **[input] array.array.integer grid**  
    A matrix representing *9 × 9* grid already filled with numbers from *1* to *9*.  
     *Guaranteed constraints:*
 ```Javascript
@@ -1925,3 +1944,348 @@ spiralNumbers(n) = [[1, 2, 3],
 
 - **[output] boolean**  
     *true* if the given grid represents a correct solution to Sudoku, *false* otherwise.  
+
+## addTwoDigits
+#### Description
+You are given a two-digit integer *n*. Return the sum of its digits.  
+
+#### Example
+```Javascript
+n = 29
+addTwoDigits(n) = 11
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer n**  
+   A positive two-digit integer.  
+    *Guaranteed constraints:*
+```Javascript
+10 ≤ n ≤ 99
+```
+
+- **[output] integer**  
+    The sum of the first and second digits of the input number.  
+
+## largestNumber
+#### Description
+Given an integer *n*, return the largest number that contains exactly *n* digits.
+
+#### Example
+```Javascript
+n = 2
+largestNumber(n) = 99
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer n**  
+
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ n ≤ 7
+```
+
+- **[output] integer**  
+    The largest integer of length *n*.  
+
+## candies
+#### Description
+*n* children have got *m* pieces of candy. They want to eat as much candy as they can, but each child must eat exactly the same amount of candy as any other child. Determine how many pieces of candy will be eaten by all the children together. Individual pieces of candy cannot be split.  
+
+#### Example
+```Javascript
+n = 3
+m = 10
+candies(n, m) = 9
+```
+Each child will eat *3* pieces. So the answer is *9*.  
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer n**  
+  The number of children.  
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ n ≤ 10
+```
+- **[input] integer m**  
+  The number of pieces of candy.
+    *Guaranteed constraints:*
+```Javascript
+2 ≤ m ≤ 100
+```
+- **[output] integer**  
+    The total number of pieces of candy the children will eat provided they eat as much as they can and all children eat the same amount.  
+
+## seatsInTheater  
+#### Description
+Your friend advised you to see a new performance in the most popular theater in the city. He knows a lot about art and his advice is usually good, but not this time: the performance turned out to be awfully dull. It's so bad you want to sneak out, which is quite simple, especially since the exit is located right behind your row to the left. All you need to do is climb over your seat and make your way to the exit.
+
+The main problem is your shyness: you're afraid that you'll end up blocking the view (even if only for a couple of seconds) of all the people who sit behind you and in your column or the columns to your left. To gain some courage, you decide to calculate the number of such people and see if you can possibly make it to the exit without disturbing too many people.
+
+Given the total number of rows and columns in the theater (*nRows* and *nCols*, respectively), and the *row* and *column* you're sitting in, return the number of people who sit strictly behind you **and** in your column or to the left, assuming all seats are occupied.
+
+#### Example
+```Javascript
+nCols = 16
+nRows = 11
+col = 5
+row = 3
+seatsInTheater(nCols, nRows, col, row) = 96
+```
+Here is what the theater looks like:  
+![seatsInTheater](images/seatsInTheater1.png)
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer nCols**  
+  An integer, the number of theater's columns.
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ nCols ≤ 1000
+```
+- **[input] integer nRows**  
+  An integer, the number of theater's rows.
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ nRows ≤ 1000
+```  
+- **[input] integer col**  
+  An integer, the column number of your own seat (1-based).
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ col ≤ nCols
+```
+- **[input] integer row**  
+  An integer, the row number of your own seat (1-based).  
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ row ≤ nRows
+```
+- **[output] integer**  
+    The number of people who sit strictly behind you **and** in your column or to the left.
+
+## maxMultiple  
+#### Description
+Given a *divisor* and a *bound*, find the largest integer *N* such that:
+
+- *N* is **divisible by** divisor.
+- *N* is **less than or equal to** bound.
+- *N* is **greater than** *0*.  
+
+It is guaranteed that such a number exists.  
+
+#### Example
+```Javascript
+divisor = 3
+bound = 10
+maxMultiple(divisor, bound) = 9
+```
+The largest integer divisible by 3 and not larger than 10 is 9.  
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer divisor**  
+
+    *Guaranteed constraints:*
+```Javascript
+2 ≤ divisor ≤ 10
+```
+- **[input] integer bound**  
+  *Guaranteed constraints:*  
+```Javascript
+5 ≤ bound ≤ 100
+```  
+- **[output] integer**  
+    The largest integer not greater than *bound* that is divisible by *divisor*.  
+
+## lateRide  
+#### Description
+One night you go for a ride on your motorcycle. At *00:00* you start your engine, and the built-in timer automatically begins counting the length of your ride, in minutes. Off you go to explore the neighborhood.
+
+When you finally decide to head back, you realize there's a chance the bridges on your route home are up, leaving you stranded! Unfortunately, you don't have your watch on you and don't know what time it is. All you know thanks to the bike's timer is that *n* minutes have passed since *00:00*.
+
+Using the bike's timer, calculate the current time. Return an answer as the sum of digits that the digital timer in the format *hh:mm* would show.  
+
+
+#### Example
+```Javascript
+// Example 1
+n = 240
+lateRide(n) = 4
+```
+Since 240 minutes have passed, the current time is 04:00. The digits sum up to 0 + 4 + 0 + 0 = 4, which is the answer.  
+
+```Javascript
+// Example 2
+n = 808
+lateRide(n) = 14
+```
+808 minutes mean that it's 13:28 now, so the answer should be 1 + 3 + 2 + 8 = 14.  
+
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer n**  
+   The duration of your ride, in minutes. It is guaranteed that you've been riding for less than a day (24 hours).  
+
+    *Guaranteed constraints:*
+```Javascript
+0 ≤ n < 60 · 24
+```
+
+- **[output] integer**  
+    The sum of the digits the digital timer would show.  
+
+
+## phoneCall  
+#### Description
+Some phone usage rate may be described as follows:  
+
+- first minute of a call costs min1 cents,  
+- each minute from the 2nd up to 10th (inclusive) costs min2_10 cents  
+- each minute after 10th costs min11 cents.  
+
+You have *s* cents on your account before the call. What is the duration of the longest call (in minutes rounded down to the nearest integer) you can have?
+
+
+#### Example
+```Javascript
+min1 = 3
+min2_10 = 1
+min11 = 2
+s = 20
+phoneCall(min1, min2_10, min11, s) = 14
+```
+Here's why:
+
+- the first minute costs 3 cents, which leaves you with 20 - 3 = 17 cents;
+- the total cost of minutes 2 through 10 is 1 * 9 = 9, so you can talk 9 more minutes and still have 17 - 9 = 8 cents;
+- each next minute costs 2 cents, which means that you can talk 8 / 2 = 4 more minutes.
+
+Thus, the longest call you can make is 1 + 9 + 4 = 14 minutes long.  
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer min1**
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ min1 ≤ 10
+```
+- **[input] integer min2_10**
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ min2_10 ≤ 10
+```
+- **[input] integer min11**  
+
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ min11 ≤ 10
+```
+- **[input] integer s**  
+
+    *Guaranteed constraints:*
+```Javascript
+12 ≤ s ≤ 60
+```
+- **[output] integer**  
+
+
+## reachNextLevel  
+#### Description
+You are playing an RPG game. Currently your experience points (XP) total is equal to *experience*. To reach the next level your XP should be at least at *threshold*. If you kill the monster in front of you, you will gain more experience points in the amount of the *reward*.
+
+Given values *experience*, *threshold* and *reward*, check if you reach the next level after killing the monster.  
+
+#### Example
+```Javascript
+// Example 1
+experience = 10
+threshold = 15
+reward = 5
+reachNextLevel(experience, threshold, reward) = true
+
+// Example 2
+experience = 10
+threshold = 15
+reward = 4
+reachNextLevel(experience, threshold, reward) = false
+```
+
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer experience**  
+
+    *Guaranteed constraints:*
+```Javascript
+3 ≤ experience ≤ 250
+```
+- **[input] integer threshold**  
+
+    *Guaranteed constraints:*
+```Javascript
+5 ≤ threshold ≤ 300
+```
+- **[input] integer reward**  
+
+    *Guaranteed constraints:*
+```Javascript
+2 ≤ reward ≤ 65
+```
+- **[output] boolean**  
+    *true* if you reach the next level, *false* otherwise.  
+
+
+## extraNumber  
+#### Description
+You're given three integers, *a*, *b* and *c*. It is guaranteed that two of these integers are equal to each other. What is the value of the third integer?  
+
+#### Example
+```Javascript
+a = 2
+b = 7
+c = 2
+extraNumber(a, b, c) = 7
+```
+The two equal numbers are *a* and *c*. The third number (b) equals *7*, which is the answer.
+#### Input/Output
+
+- **[time limit] 3000ms (java)**
+- **[input] integer a**  
+
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ a ≤ 10^9
+```
+- **[input] integer b**  
+
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ b ≤ 10^9
+```
+- **[input] integer c**  
+
+    *Guaranteed constraints:*
+```Javascript
+1 ≤ c ≤ 10^9
+```
+- **[output] integer**  
+    
+
+## isInfiniteProcess  
+
+## arithmeticExpression  
+
+## tennisSet  
+
+##  willYou  
+
+## metroCard  
