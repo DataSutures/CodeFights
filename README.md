@@ -1,11 +1,11 @@
 # CodeFights
 Solutions for challenges proposed on [CodeFights.com](https://codefights.com/arcade "codefights")
 ## Arcade
-> #### [Intro](##intro)
-> #### [Databases](##databases)
-> #### [The Core](##thecore)
-> #### [Python](##python)
-> #### [Graphs](##graphs)
+> #### [Intro](#intro)
+> #### [Databases](#databases)
+> #### [The Core](#thecore)
+> #### [Python](#python)
+> #### [Graphs](#graphs)
 
 ## Intro
 
@@ -2278,7 +2278,7 @@ The two equal numbers are *a* and *c*. The third number (b) equals *7*, which is
 1 ≤ c ≤ 10^9
 ```
 - **[output] integer**  
-    
+
 
 ## isInfiniteProcess  
 
